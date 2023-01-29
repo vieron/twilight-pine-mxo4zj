@@ -1,0 +1,42 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Created with CodeSandbox",
+  "main": "src/index.js",
+  "scripts": {
+    "watch": "npm-watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:js && npm run build:css && npm run build:html",
+    "build:css": "postcss src/styles.css -o dist/styles.css",
+    "build:js": "cp src/*.js dist/",
+    "build:html": "cp src/*.html dist/",
+    "dev": "concurrently 'npm run build && live-server dist --port=8080' 'npm run watch'"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html,css,js"
+    }
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^3.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "npm-watch": "^0.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vieron/twilight-pine-mxo4zj.git"
+  },
+  "author": "vieron",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/vieron/twilight-pine-mxo4zj/issues"
+  },
+  "homepage": "https://github.com/vieron/twilight-pine-mxo4zj#readme"
+}
