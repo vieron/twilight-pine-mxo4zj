@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "npm-watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:js && npm run build:css && npm run build:html",
+    "build": "mkdir -p dist/ && npm run build:js && npm run build:css && npm run build:html",
     "build:css": "postcss src/styles.css -o dist/styles.css",
     "build:js": "cp src/*.js dist/",
     "build:html": "cp src/*.html dist/",
@@ -21,13 +21,14 @@
     }
   },
   "dependencies": {
-    "autoprefixer": "^10.2.4",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "concurrently": "^7.2.2",
-    "npm-watch": "^0.11.0"
+    "npm-watch": "^0.11.0",
+    "postcss": "^8.4.21"
   },
   "repository": {
     "type": "git",
