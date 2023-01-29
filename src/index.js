@@ -22,10 +22,11 @@ function blotterize(selector) {
   const blotterTexts = lines.map(
     (text) =>
       new Blotter.Text(text, {
-        family: "'YoungSerif', 'Hoefler Text Black', 'EB Garamond', serif",
-        size: 100,
+        // family: "'YoungSerif', 'Hoefler Text Black', 'EB Garamond', serif",
+        family: "'NeueHaasDisplay-Black', sans-serif",
+        size: 120,
         leading: 1,
-        fill: "#FB3640",
+        fill: "#FFF",
         paddingTop: paddingV,
         paddingBottom: paddingV,
         paddingLeft: 120,
@@ -40,17 +41,18 @@ function blotterize(selector) {
   // down animation, while higher values speed it up. At
   // a speed of 0.0, animation is stopped entirely.
   material.uniforms.uSpeed.value = 0;
-  3;
 
   // Try uncommenting the following line to play with
   // the "volatility" of the effect. Higher values here will
   // produce more dramatic changes in the appearance of your
   // text as it animates, but you will likely want to keep
   // the value below 1.0.
+  // material.uniforms.uVolatility.value = 0.2;
   material.uniforms.uVolatility.value = 0.2;
 
   // only applies if uSpeed > 0
   material.uniforms.uSeed.value = 366.5;
+  // material.uniforms.uSeed.value = 566.5;
 
   const blotter = new Blotter(material, {
     texts: blotterTexts,
