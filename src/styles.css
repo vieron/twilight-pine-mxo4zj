@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blotter-text {
+  text-align: center;
+}
+
+.blotter-text-fragment {
+  /* border: 1px solid red; */
+  display: inline-block;
+}
+
+.blotter-text-fragment canvas {
+  display: inline-block;
+}
